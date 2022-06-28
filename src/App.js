@@ -26,24 +26,6 @@ function App() {
              </togglePricing.Provider>
         </main>
         <Footer />
-      {/* <main className="main">
-          <h1>Our Pricing</h1>
-          <Toggle />
-          <div className="cards">
-          {data.map(data => {
-            return <Card 
-            key={data.id}
-            title={data.title}
-            priceMonthly={data.priceMonthly}
-            priceAnnually={data.priceAnnually}
-            storage={data.storage}
-            users={data.users}
-            amount={data.amount}
-          />
-          })}
-          </div>
-      </main>
-      <Footer /> */}
     </>
   );
 }
