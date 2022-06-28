@@ -21,7 +21,7 @@
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--Light-Grayish-Blue); 
+  background: var(--Very-Light-Grayish-Blue); 
   position: relative;
   text-align: center;
   min-height: 100vh;
@@ -106,6 +106,7 @@ button:focus, a:focus {
   margin-bottom: 2rem;
   border-radius: 10px;
   font-family: inherit;
+  box-shadow: 2px 0px 25px rgba(73, 76, 95, 0.1);
 }
 .card > * {
   margin-bottom: 2rem;
