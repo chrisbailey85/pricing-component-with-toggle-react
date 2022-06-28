@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.css';
+import Toggle from './Toggle';
+import data from "./data";
+import Card from './Card';
+import Footer from './Footer';
+import { createContext, useState } from 'react';
+export const togglePricing = createContext();
 
 function App() {
+  const [pricing, setPricing] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <main className="main">
+            <h1 className='heading'>Our Pricing</h1>
+            <togglePricing.Provider value={{pricing, setPricing}}>
+              <Toggle />
+              <div className="cards">
+              {data.map(data => {
+                return <Card 
+                key={data.id}
+                data={data}
+              />
+              })}
+              </div>
+             </togglePricing.Provider>
+        </main>
+        <Footer />
+      {/* <main className="main">
+          <h1>Our Pricing</h1>
+          <Toggle />
+          <div className="cards">
+          {data.map(data => {
+            return <Card 
+            key={data.id}
+            title={data.title}
+            priceMonthly={data.priceMonthly}
+            priceAnnually={data.priceAnnually}
+            storage={data.storage}
+            users={data.users}
+            amount={data.amount}
+          />
+          })}
+          </div>
+      </main>
+      <Footer /> */}
+    </>
   );
 }
 
