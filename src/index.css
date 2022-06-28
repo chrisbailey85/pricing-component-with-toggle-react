@@ -26,7 +26,10 @@ body {
   text-align: center;
   min-height: 100vh;
 }
-
+button:focus, a:focus {
+  outline-offset: 5px;
+  outline: 2px dashed var(--Dark-Grayish-Blue);
+}
 /* shows only on screen reader's */
 
 .sr-only {
